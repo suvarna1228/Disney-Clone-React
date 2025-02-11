@@ -3,7 +3,7 @@ import GlobalApi from '../Services/GlobalApi';
 const IMAGE_BASE_URL ='http://image.tmdb.org/t/p/original';
 import { HiArrowSmLeft, HiArrowNarrowRight } from "react-icons/hi";
 
-const screeenWidth=window.innerWidth;
+const screenWidth=window.innerWidth;
 const Slider = () => {
     const [movieList,setMovieList]=useState([]);
     const elementRef= useRef();
@@ -18,10 +18,10 @@ const Slider = () => {
         })
     }
     const sliderRight=(element)=>{
-      element.scrollLeft+=screeenWidth-110
+      element.scrollLeft+=screenWidth-110
     }
     const sliderLeft=(element)=>{
-      element.scrollLeft-=screeenWidth-110
+      element.scrollLeft-=screenWidth-110
     }
   return (
     <div>
@@ -37,7 +37,7 @@ const Slider = () => {
         key={item.id}
         src={IMAGE_BASE_URL+item.backdrop_path}
         alt={item.title}
-        className="min-w-full md:h-[310px] object-cover object-left-top mr-5 rounded-md hover:border-[4px] border-gray-400 transition-all duration-100 ease-in"/>
+        className="min-w-full md:h-[500px] object-cover object-left-top mr-5 rounded-md hover:border-[4px] border-gray-400 transition-all duration-100 ease-in"/>
       ))}
 
     </div>
